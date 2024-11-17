@@ -14,7 +14,7 @@ export default async function BlogPage(){
                 <h2 className="text-2xl font-semibold mb-4">Available Blogs</h2>
                 {blogs.length > 0 ? (
                     blogs.map((blog) => (
-                        <div key={blog.id} className="border rounded p-4 mb-4 shadow-sm bg-gray-50 max-h-40">
+                        <div key={blog._id} className="border rounded p-4 mb-4 shadow-sm bg-gray-50 max-h-40">
                             <a href={`/blog/${blog._id}`}><h3 className="text-xl font-bold hover:underline w-fit">{blog.title}</h3></a>
                             <p className="text-sm text-gray-500 mb-2">
                                 Published on {new Date(blog.createdAt).toLocaleDateString()}
