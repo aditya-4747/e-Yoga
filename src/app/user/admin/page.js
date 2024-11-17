@@ -3,12 +3,10 @@ import ProductsList from '@/components/ProductsList';
 import SocialMediaUpdate from '@/components/SocialMediaUpdate';
 
 export default async function AnalyticsPage(){
-
-    const blogsCount = await (await fetch(`https://e-yoga.vercel.app/api/v1/analytics`)).json();    
     
     const analytics = {
         "productsCount": 5,
-        "blogArticlesCount": blogsCount[0].blogs
+        "blogArticlesCount": 5
     }
 
     if (!analytics) {
